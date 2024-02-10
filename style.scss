@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
 $bg: pink;
 $text: #edb3c3;
@@ -23,16 +25,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0;
-  min-height: 100vh;
+  min-height: 1080px;
   background: $bg;
 
   position: relative;
   width: 100%;
   height: 100%;
   background: url("http://unsplash.it/1200x800") center center no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   &:before {
     content: "";
@@ -42,15 +44,63 @@ body {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom right, #ffe4e6, #fda4af);
-    opacity: 0.6;
+    opacity: 0.3;
   }
+}
+
+.home-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-heart img {
+  display: block;
+  height: auto;
+  margin: auto;
+  position: absolute;
+}
+
+.cassidy {
+  font-family: "Handlee", cursive;
+  font-size: 80px;
+  display: block;
+  height: auto;
+  margin: auto;
+  position: absolute;
 }
 
 .title {
   color: #4c0519;
 }
 
-button {
+a {
+  z-index: 999;
+}
+
+.next-button:hover {
+  letter-spacing: 0.8em !important;
+  background-color: #f08c99 !important;
+}
+
+.next-button {
+  height: 60px !important;
+  width: 150px !important;
+  padding: 1.5em auto !important;
+  margin: 1em auto !important;
+  background-color: #feb1c0 !important;
+  border: none !important;
+  border-radius: 3px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5em !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: white !important;
+  size: 60px !important;
+  background-color: $bg !important;
+  z-index: 999;
+}
+
+.v-button {
   position: relative;
   display: inline-block;
   cursor: pointer;
